@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Intro</title>
+  </head>
+  <body>
+    <form action="">
+      <!-- for will look for the input box with the same id -->
+      <label for="fname">Enter your First Name - </label>
+      <input type="text" id="fname" name="fname" />
+      <br /><br />
+      <!-- name attribute will save the data in a particular variable -->
+      <label for="lname">Enter your Last Name - </label>
+      <input type="text" id="lname" name="lname" />
+      <br /><br />
+
+      <label for="mail">Enter your Email Address -</label>
+      <input type="email" name="mail" id="mail" />
+      <br /><br />
+
+      <label for="pnumber">Enter your Mobile Number - </label>
+      <input type="tel" name="pnumber" id="pnumber" />
+      <br /><br />
+
+      <label for="dob">Enter your Date of Birth - </label>
+      <input type="date" id="dob" name="dob" />
+      <br /><br />
+
+      <label for="Ano">Enter your Aadhar No. -</label>
+      <input type="number" id="Ano" name="Ano" />
+      <br /><br />
+
+      <label for="gender">Your Gender - </label>
+      <input type="radio" id="gender" name="gender" value="female" />FEMALE
+      <input type="radio" id="gender" name="gender" value="male" /> MALE
+      <br /><br />
+
+      <label for="addr">Enter your Address -</label>
+      <textarea id="aadr" name="addr"></textarea>
+      <br /><br />
+
+      <label for="vaccine">Vaccination Details - </label>
+      <select name="vdetails" id="vaccine">
+        <optgroup label="CovidShield">
+          <option value="cs1">First Dose</option>
+          <option value="cs2">Second Dose</option>
+        </optgroup>
+        <optgroup label="CoVaxin">
+          <option value="cv1">First Dose</option>
+          <option value="cv2">Second Dose</option>
+        </optgroup>
+      </select>
+      <br /><br />
+
+      <label for="ChD">Common Heath Problems (if any) :</label><br />
+      <input
+        type="checkbox"
+        name="heathProb"
+        id="ChD"
+        value="Diabetes"
+      />Diabetes
+      <br />
+      <input
+        type="checkbox"
+        name="heathProb"
+        id="ChD"
+        value="HyperThyrodism"
+      />HyperThyrodism
+      <br />
+      <input type="checkbox" name="heathProb" id="ChD" value="Cardiac" />Cardiac
+      Problems
+      <br />
+      <input
+        type="checkbox"
+        name="heathProb"
+        id="ChD"
+        value="BloodPressure"
+      />Blood Pressure
+      <br />
+      <input type="checkbox" name="heathProb" id="ChD" value="pcod" />PCOD
+      <br />
+      Check if all the above are no:
+      <input type="checkbox" name="heathProb" id="ChD" value="healthy" />Healthy
+      <br /><br />
+
+      <label for="certificate"
+        >Vaccination certificate (in case of 2nd dose) -
+      </label>
+      <input type="file" name="certiFile" id="certificate" />
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
