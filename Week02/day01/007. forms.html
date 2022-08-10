@@ -3,96 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms Intro</title>
   </head>
   <body>
-    <form action="">
-      <!-- for will look for the input box with the same id -->
-      <label for="fname">Enter your First Name - </label>
-      <input type="text" id="fname" name="fname" />
-      <br /><br />
-      <!-- name attribute will save the data in a particular variable -->
-      <label for="lname">Enter your Last Name - </label>
-      <input type="text" id="lname" name="lname" />
-      <br /><br />
+    <form style="background-color: lightblue" method="get" action="#" autofocus="on" autocomplete="on">          
+      <fieldset>
+         <legend>COVID VACCINE SURVEY</legend>
+        <center><img src="https://cdn.pixabay.com/photo/2020/06/16/16/00/people-5306374_960_720.png" alt="Not Found" height="400px">
+        <table border="2" style="background-color: lightgreen">
+          <tr>
+            <td>
+              <!-- for will look for the input box with the same id -->
+              <label for="fname">Enter your First Name - </label>
+            </td>
+            <td><input type="text" id="fname" name="fname" required placeholder="First name"/></td>
+          </tr>
+          <br /><br />
+          <tr>
+            <td>
+              <!-- name attribute will save the data in a particular variable -->
+              <label for="lname">Enter your Last Name - </label>
+            </td>
+            <td><input type="text" id="lname" name="lname" placeholder="Last name"/></td>
+          </tr>
 
-      <label for="mail">Enter your Email Address -</label>
-      <input type="email" name="mail" id="mail" />
-      <br /><br />
+          <tr>
+            <td><label for="mail">Enter your Email Address -</label></td>
+            <td><input type="email" name="mail" id="mail"/></td>
+          </tr>
 
-      <label for="pnumber">Enter your Mobile Number - </label>
-      <input type="tel" name="pnumber" id="pnumber" />
-      <br /><br />
+          <tr>
+            <td><label for="pnumber">Enter your Mobile Number - </label></td>
+            <td><input type="tel" name="pnumber" id="pnumber" required minlength="10" maxlength="10"/>
+            <i class="fa-thin fa-folder-user"></i></td>
+          </tr>
 
-      <label for="dob">Enter your Date of Birth - </label>
-      <input type="date" id="dob" name="dob" />
-      <br /><br />
+          <tr>
+            <td><label for="dob">Enter your Date of Birth - </label></td>
+            <td><input type="date" id="dob" name="dob" required/></td>
+          </tr>
 
-      <label for="Ano">Enter your Aadhar No. -</label>
-      <input type="number" id="Ano" name="Ano" />
-      <br /><br />
+          <tr>
+            <td><label for="Ano">Enter your Aadhar No. -</label></td>
+            <td><input type="number" id="Ano" name="Ano" required minlength="12" maxlength="12"/></td>
+          </tr>
 
-      <label for="gender">Your Gender - </label>
-      <input type="radio" id="gender" name="gender" value="female" />FEMALE
-      <input type="radio" id="gender" name="gender" value="male" /> MALE
-      <br /><br />
+          <tr>
+            <td><label for="gender">Your Gender - </label></td>
+            <td>
+              <input
+                type="radio"
+                id="gender"
+                name="gender"
+                value="female"
+              />FEMALE
+              <input type="radio" id="gender" name="gender" value="male" />
+              MALE
+            </td>
+          </tr>
 
-      <label for="addr">Enter your Address -</label>
-      <textarea id="aadr" name="addr"></textarea>
-      <br /><br />
+          <tr>
+            <td><label for="addr">Enter your Address -</label></td>
+            <td><textarea id="aadr" name="addr"></textarea></td>
+          </tr>
 
-      <label for="vaccine">Vaccination Details - </label>
-      <select name="vdetails" id="vaccine">
-        <optgroup label="CovidShield">
-          <option value="cs1">First Dose</option>
-          <option value="cs2">Second Dose</option>
-        </optgroup>
-        <optgroup label="CoVaxin">
-          <option value="cv1">First Dose</option>
-          <option value="cv2">Second Dose</option>
-        </optgroup>
-      </select>
-      <br /><br />
+          <tr>
+            <td><label for="vaccine">Vaccination Details - </label></td>
+            <td>
+              <select name="vdetails" id="vaccine" required>
+                <optgroup label="CovidShield">
+                  <option value="cs1">First Dose</option>
+                  <option value="cs2">Second Dose</option>
+                </optgroup>
+                <optgroup label="CoVaxin">
+                  <option value="cv1">First Dose</option>
+                  <option value="cv2">Second Dose</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
 
-      <label for="ChD">Common Heath Problems (if any) :</label><br />
-      <input
-        type="checkbox"
-        name="heathProb"
-        id="ChD"
-        value="Diabetes"
-      />Diabetes
-      <br />
-      <input
-        type="checkbox"
-        name="heathProb"
-        id="ChD"
-        value="HyperThyrodism"
-      />HyperThyrodism
-      <br />
-      <input type="checkbox" name="heathProb" id="ChD" value="Cardiac" />Cardiac
-      Problems
-      <br />
-      <input
-        type="checkbox"
-        name="heathProb"
-        id="ChD"
-        value="BloodPressure"
-      />Blood Pressure
-      <br />
-      <input type="checkbox" name="heathProb" id="ChD" value="pcod" />PCOD
-      <br />
-      Check if all the above are no:
-      <input type="checkbox" name="heathProb" id="ChD" value="healthy" />Healthy
-      <br /><br />
+          <tr>
+            <td><label for="ChD">Common Heath Problems (if any) :</label></td>
+            <td>
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="Diabetes"
+              />Diabetes
+              <br />
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="HyperThyrodism"
+              />HyperThyrodism
+              <br />
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="Cardiac"
+              />Cardiac Problems
+              <br />
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="BloodPressure"
+              />Blood Pressure
+              <br />
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="pcod"
+              />PCOD
+              <br />
+              Check if all the above are no:
+              <input
+                type="checkbox"
+                name="heathProb"
+                id="ChD"
+                value="healthy"
+              />Healthy
+            </td>
+          </tr>
 
-      <label for="certificate"
-        >Vaccination certificate (in case of 2nd dose) -
-      </label>
-      <input type="file" name="certiFile" id="certificate" />
-      <br /><br />
-
-      <input type="submit" />
+          <tr>
+            <td>
+              <label for="certificate"
+                >Vaccination certificate (in case of 2nd dose) -
+              </label>
+            </td>
+            <td><input type="file" name="certiFile" id="certificate" /></td>
+          </tr>
+        </table>
+        </center>
+        <hr />
+        <center><input type="submit" /> <input type="reset" /></center>
+        <button ><a
+          href="https://www.policybazaar.com/health-insurance/coronavirus-health-insurance/"
+          >NEXT</button></a
+        >
+      </fieldset>
     </form>
   </body>
 </html>
