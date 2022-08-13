@@ -1,0 +1,108 @@
+.mainBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.subBlock {
+  height: 600px;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: lightblue; */
+  background: linear-gradient(
+    rgb(69, 69, 199),
+    rgb(90, 178, 207),
+    rgb(204, 182, 224)
+  );
+}
+
+.card {
+  /* border: 2px solid lightgreen;
+  padding-right: 10px; */
+  box-shadow: 4px 7px 15px rgb(235, 227, 181);
+  height: 500px;
+}
+
+img {
+  border-radius: 25px;
+}
+
+h1 {
+  color: rgb(61, 11, 61);
+  text-align: center;
+}
+
+/* img:hover {
+  height: 500px;
+  width: 300px;
+} */
+h1:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+h3 {
+  color: rgb(10, 73, 10);
+}
+strike {
+  color: red;
+}
+button {
+  background-color: rgb(231, 189, 18);
+  color: darkviolet;
+  margin-top: 10px;
+  margin-left: 65px;
+  border: 2px solid cornsilk;
+  border-radius: 25px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: lightgreen;
+  color: black;
+  text-decoration: underline;
+}
+/* Transformation */
+/* .card:hover {
+  transition-delay: 1s;
+  transition-duration: 10s;
+  transform: scale(1.5);
+  transform: skewY(20deg);
+  transform: rotate(30deg);
+}*/
+
+/* Animation */
+.card {
+  /* properties of animation */
+  animation: animation1;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+/* create animation */
+@keyframes animation1 {
+  20% {
+    background-color: lightcoral;
+    transform: scale(0.8);
+  }
+  40% {
+    background-color: lightcyan;
+  }
+  60% {
+    background-color: lightgreen;
+    transform: skew(10deg);
+  }
+  80% {
+    background-color: lightpink;
+    transform: skew(-10deg);
+  }
+  100% {
+    background-color: rgb(248, 248, 134);
+    transform: skew(10deg);
+  }
+}

@@ -1,0 +1,129 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2015/01/11/07/06/moe-595959_960_720.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#h1 {
+  margin-top: 150px;
+  margin-left: 200px;
+  background-color: blueviolet;
+  width: fit-content;
+  color: white;
+}
+
+.h2 {
+  margin-left: 200px;
+  background-color: white;
+  width: fit-content;
+  font-size: large;
+}
+
+a {
+  margin-left: 200px;
+  text-decoration: none;
+}
+/* color of link:
+  not visited - blue
+  visited - purple
+  active - red */
+a:visited {
+  color: gold;
+}
+a:active {
+  color: aqua;
+}
+fieldset {
+  margin-left: 200px;
+  width: fit-content;
+  background-color: aliceblue;
+  color: black;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+label {
+  color: black;
+}
+
+form {
+  height: 150px;
+  width: fit-content;
+  color: black;
+}
+
+legend {
+  background-color: blueviolet;
+  color: white;
+  font-size: large;
+}
+
+/* focus - input type */
+.name {
+  border: 2px solid red;
+}
+.name:focus {
+  background-color: lightgreen;
+  color: rebeccapurple;
+}
+
+/* Hover selector */
+fieldset:hover {
+  background-image: url("https://cdn.pixabay.com/photo/2022/06/27/14/38/cat-7287671_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#social {
+  height: fit-content;
+  width: 200px;
+  margin-left: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+i {
+  font-size: xx-large;
+  font-weight: 300;
+  color: wheat;
+}
+
+/* Pseudo Element Selector */
+.p1 {
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 500px;
+}
+
+.p1::selection {
+  /* background-color: aliceblue;
+  color: brown; */
+  user-select: none;
+}
+.p1::first-letter {
+  color: darkblue;
+  font-size: xx-large;
+}
+
+.p1::first-line {
+  background-color: aquamarine;
+  color: red;
+}
+
+.p1::before {
+  content: url("../Images/img1.jpg");
+}
+
+.p1::after {
+  content: url("../Images/img1.jpg");
+}
+
+/* Combination Selector */
+ul li::marker {
+  color: chartreuse;
+}
+
+ul li {
+  font-size: xx-large;
+}
