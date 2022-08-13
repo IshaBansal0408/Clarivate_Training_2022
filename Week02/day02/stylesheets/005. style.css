@@ -1,0 +1,86 @@
+body {
+  background-color: aliceblue;
+}
+
+/* Universal Rule to remove the gap between the nav bar and the head of the website */
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+#mainNav {
+  height: 80px;
+  background-color: rgb(164, 123, 202);
+  width: 100%;
+}
+
+#mainNav #subNav {
+  height: 80px;
+  width: 90%;
+  background-color: rgb(21, 100, 100);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search {
+  width: 400px;
+  /* border: 2px solid green; */
+}
+
+.search .SBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.SBar {
+  border: 3px solid black;
+}
+.SBar input {
+  font-size: 25px;
+  width: 700px;
+  height: 35px;
+}
+
+#mainNav i {
+  font-size: 35px;
+  background-color: white;
+}
+
+.addr:hover {
+  border: 2px solid white;
+  box-shadow: 3px 4px 12px grey;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: x-large;
+  color: wheat;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.lang:hover {
+  border: 2px solid white;
+  box-shadow: 3px 4px 12px grey;
+}
+
+.drop {
+  height: 200px;
+  width: 400px;
+  background-color: white;
+  display: none;
+  text-align: center;
+}
+.signin:hover > .drop {
+  /* avoid overalapping */
+  position: absolute;
+  /* make it come at a position from top and right */
+  top: 90px;
+  right: 30px;
+  display: block;
+}

@@ -1,0 +1,210 @@
+body {
+  background-color: aliceblue;
+}
+
+/* Universal Rule to remove the gap between the nav bar and the head of the website */
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+#mainNav {
+  height: 80px;
+  background-color: rgb(164, 123, 202);
+  width: 100%;
+}
+
+#mainNav #subNav {
+  height: 80px;
+  width: 90%;
+  background-color: rgb(21, 100, 100);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search {
+  width: 400px;
+  /* border: 2px solid green; */
+}
+
+.search .SBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.SBar {
+  border: 3px solid black;
+}
+.SBar input {
+  font-size: 25px;
+  width: 700px;
+  height: 35px;
+}
+
+#mainNav i {
+  font-size: 35px;
+  background-color: white;
+}
+
+.addr:hover {
+  border: 2px solid white;
+  box-shadow: 3px 4px 12px grey;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: x-large;
+  color: wheat;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.lang:hover {
+  border: 2px solid white;
+  box-shadow: 3px 4px 12px grey;
+}
+
+.drop {
+  height: 200px;
+  width: 400px;
+  background-color: white;
+  display: none;
+  text-align: center;
+}
+
+.signin {
+  position: relative;
+}
+
+.signin:hover > .drop {
+  /* avoid overalapping */
+  position: absolute;
+  /* make it come at a position from top and right */
+  top: 90px;
+  right: 30px;
+  display: block;
+}
+
+.mainBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.subBlock {
+  height: 600px;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: lightblue; */
+  background: linear-gradient(
+    rgb(69, 69, 199),
+    rgb(90, 178, 207),
+    rgb(204, 182, 224)
+  );
+}
+
+.card {
+  /* border: 2px solid lightgreen;
+  padding-right: 10px; */
+  box-shadow: 4px 7px 15px rgb(235, 227, 181);
+  height: 500px;
+}
+
+img {
+  border-radius: 25px;
+}
+
+h1 {
+  color: rgb(61, 11, 61);
+  text-align: center;
+}
+
+/* img:hover {
+  height: 500px;
+  width: 300px;
+} */
+h1:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+h3 {
+  color: rgb(10, 73, 10);
+}
+strike {
+  color: red;
+}
+button {
+  background-color: rgb(231, 189, 18);
+  color: darkviolet;
+  margin-top: 10px;
+  margin-left: 65px;
+  border: 2px solid cornsilk;
+  border-radius: 25px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: lightgreen;
+  color: black;
+  text-decoration: underline;
+}
+/* Transformation */
+/* .card:hover {
+  transition-delay: 1s;
+  transition-duration: 10s;
+  transform: scale(1.5);
+  transform: skewY(20deg);
+  transform: rotate(30deg);
+}*/
+
+/* Animation */
+.card {
+  /* properties of animation */
+  animation: animation1;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+/* create animation */
+@keyframes animation1 {
+  20% {
+    background-color: lightcoral;
+    transform: scale(0.8);
+  }
+  40% {
+    background-color: lightcyan;
+  }
+  60% {
+    background-color: lightgreen;
+    transform: skew(10deg);
+  }
+  80% {
+    background-color: lightpink;
+    transform: skew(-10deg);
+  }
+  100% {
+    background-color: rgb(248, 248, 134);
+    transform: skew(10deg);
+  }
+}
+
+/* display grid */
+.product {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: aqua;
+  row-gap: 10px;
+  column-gap: 10px;
+}

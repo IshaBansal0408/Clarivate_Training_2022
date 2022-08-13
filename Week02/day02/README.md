@@ -31,10 +31,9 @@
         </ul>
     <li>Pseudo Class V/S Pseudo Element Selector</li>
     <li>2D and 3D Transforms</li>
-    <li></li>
-    <li></li>
-    <li></li>
-
+    <li>Animations</li>
+    <li>Navigation Bar</li>
+    <li>Display Flex vs Display Grid</li>
 </ol>
 
 > Inline CSS is selected before Internal CSS <br>
