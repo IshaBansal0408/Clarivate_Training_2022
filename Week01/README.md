@@ -1,7 +1,8 @@
 # Java Programming - 5 Day Learning
 
+<p align="center">
 <img src="https://content.techgig.com/photo/90078629.cms">
-
+</p>
 <hr>
 
 ## Day 1 - Java Programming

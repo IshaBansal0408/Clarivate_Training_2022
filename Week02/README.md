@@ -1,6 +1,6 @@
 # Web Technology (Introduction) - 3 Day Learning
 
-<center><img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" height="400px"></center>
+<p align="center"><img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" height="400px"></p>
 
 > Basic Terminologies
 
@@ -15,7 +15,7 @@
 
 > How Web Works?
 
-<center><img src="./day01/Images/RM1.png" height="300px" width="500px"></center>
+<p align="center"><img src="./day01/Images/RM1.png" height="300px" width="500px"></p>
 
 When the user opens a browser and enters something like https://www.Google.com, the request goes to one of many special servers on the Internet known as Domain Name Servers (DNS).
 
@@ -37,7 +37,7 @@ Dedicated Servers – A dedicated server is a type of web hosting in which a cli
 
 A URL (Uniform Resource Locator) is a unique identifier used to locate a resource on the Internet. The URL makes it possible for a computer to locate and open a web page on a different computer on the Internet.
 
-<center> <img src="./day01/Images/RM2.jpg" height="200px" width="700px"></center>
+<p align="center"><img src="./day01/Images/RM2.jpg" height="200px" width="700px"></p>
 
 A protocol is a kind of set of rules that describe the sequence, features of interaction between two or more devices connected to the same network and carrying out communication. The protocol is how the browser gets the information about that page. The protocol is followed by the :// characters.
 
@@ -50,7 +50,7 @@ The last part refers to the exact location of a page, post or file.
 
 > Static vs Dynamic Website
 
-<center><img src="./day01/Images/RM3.png" height="200px" width="600px"></center>
+<p align="center"><img src="./day01/Images/RM3.png" height="200px" width="600px"></p>
 
 A static website is one with stable content, where every user sees the exact same thing on each individual page.
 

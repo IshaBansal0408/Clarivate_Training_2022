@@ -1,6 +1,6 @@
 # Weekly Learning 2022
 
-<center><img src="https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png" height="300px"></center>
+<p align="center"><img src="https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png" height="300px"></p>
 
 ## List of Concepts Learned :
 
