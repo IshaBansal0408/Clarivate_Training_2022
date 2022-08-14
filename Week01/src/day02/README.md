@@ -1,6 +1,7 @@
-# Day 1 - Java Programming
+# Day 2 - Java Programming
 
 ## Topics Covered
+
 1. Introduction to Methods
 2. Access Specifiers, Modifiers, Return type
 3. Types of Methods
@@ -15,4 +16,3 @@
 12. Encapsulation
 13. Data Hiding
 14. Getter and Setter Methods
-
