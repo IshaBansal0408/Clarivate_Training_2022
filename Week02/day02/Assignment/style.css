@@ -136,6 +136,10 @@ body {
   font-size: x-large;
 }
 
+.mainPara::selection {
+  user-select: none;
+}
+
 .card {
   /* border: 2px solid wheat; */
   width: 400px;
