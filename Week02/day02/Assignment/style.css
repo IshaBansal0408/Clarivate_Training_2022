@@ -1,0 +1,260 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045_960_720.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+.mainNav {
+  height: 90px;
+  width: 100%;
+  background-color: purple;
+}
+.mainNav .subNav {
+  height: 90px;
+  width: 100%;
+  background-color: blueviolet;
+  margin: 0% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search {
+  width: 925px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.searchBar {
+  font-size: xx-large;
+  width: 900px;
+  border: 3px solid black;
+}
+
+.searchBar:focus {
+  background-color: azure;
+  border: 2px solid red;
+}
+
+.search i {
+  width: 50px;
+  text-align: center;
+  font-size: xx-large;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.signin button {
+  font-size: x-large;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  background-color: gold;
+  color: black;
+  animation: animation2;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.signin button:hover {
+  transform: scale(1.3);
+}
+
+#signInbtn a {
+  text-decoration: none;
+  color: black;
+}
+
+/* hide dropdown before */
+.drop {
+  height: 300px;
+  width: 500px;
+  background-color: aliceblue;
+  display: none;
+  position: relative;
+}
+
+.category {
+  font-size: x-large;
+}
+
+.category:hover {
+  border: 2px solid white;
+}
+
+.category:hover > .drop {
+  font-size: medium;
+  position: absolute;
+  z-index: 1000;
+  top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.drop:hover {
+  font-size: medium;
+  position: absolute;
+  z-index: 1000;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.lang {
+  font-size: x-large;
+}
+
+.lang:hover {
+  border: 2px solid white;
+}
+
+.mainheading {
+  margin-top: 20px;
+  text-align: center;
+  font-size: xxx-large;
+  background-color: black;
+  color: white;
+}
+
+.mainInfo {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.mainPara {
+  padding: 20px;
+  font-size: x-large;
+}
+
+.card {
+  /* border: 2px solid wheat; */
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  /* Animation */
+  /* animation: animation1;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal; */
+}
+
+.SubGameBlock {
+  margin-left: 100px;
+  margin-right: 90px;
+  margin-top: 50px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto auto auto;
+  row-gap: 20px;
+}
+
+.card button {
+  height: 50px;
+  width: 250px;
+  font-size: x-large;
+  border-radius: 100px;
+}
+
+.card button:hover {
+  background-color: greenyellow;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card img {
+  border-radius: 30px;
+}
+
+.card h1 {
+  font-size: xx-large;
+}
+
+.card h3 {
+  font-size: x-large;
+}
+
+.card:hover {
+  background-color: aliceblue;
+  opacity: 0.8;
+  transform: scale(1.3);
+}
+
+@keyframes animation1 {
+  20% {
+    /* transform: scale(0.9); */
+    background-color: rgb(67, 155, 231);
+  }
+  40% {
+    /* transform: scale(1); */
+    background-color: aquamarine;
+  }
+  60% {
+    /* transform: scale(0.9); */
+    background-color: lightcoral;
+  }
+  80% {
+    /* transform: scale(1); */
+    background-color: lightgreen;
+  }
+  100% {
+    /* transform: scale(0.9); */
+    background-color: lightseagreen;
+  }
+}
+
+@keyframes animation2 {
+  20% {
+    transform: scale(0.9);
+    background-color: gold;
+  }
+  40% {
+    transform: scale(1);
+    background-color: goldenrod;
+  }
+  60% {
+    transform: scale(0.9);
+    background-color: gold;
+  }
+  80% {
+    transform: scale(1);
+    background-color: goldenrod;
+  }
+  100% {
+    transform: scale(0.9);
+    background-color: gold;
+  }
+}
+.footer {
+  margin-top: 100px;
+  height: 300px;
+  color: aliceblue;
+  padding: 50px;
+  text-align: center;
+  background-color: black;
+}
+
+.feedbackbtn {
+  font-size: x-large;
+  border: 2px solid red;
+  width: 500px;
+  height: 50px;
+}
+
+.feedbackbtn:hover {
+  background-color: lightseagreen;
+  transform: scale(1.2);
+}
