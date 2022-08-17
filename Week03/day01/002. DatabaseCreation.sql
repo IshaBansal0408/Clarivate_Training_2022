@@ -1,0 +1,1 @@
+create database jdbc01_data;
