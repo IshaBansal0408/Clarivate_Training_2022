@@ -1,0 +1,92 @@
+> Learn about executeQuery
+	statement.executeQuery();
+	Return type is ResultSet
+		> it is a type of interface
+	Will only work for select queries
+> Batch Execution
+	Execute a bunch of queries together
+	A container is created
+		>insert query => add.batch => insert query => add.batch.....
+		> execute batch();
+> com.ty.dto
+	data transfer object
+> com.ty.dao
+	data access object
+> com.ty.util
+	Helper class
+	getConnection()
+> com.ty.controller
+	For testing purpose
+	TestSaveEmployee()
+	WhiteBox Testing
+
+> Introduction to Hibernate
+	$ Disadvantages of JDBC : 	Database speific (uses specific drivers for each database). 
+					Does not support Lazy/Eager Loading processes.
+					The programer only: 
+						Writes the query
+						Creates the tables
+						Generates primary key
+					It is a technology and NOT a framework.
+					JDBC does not support mapping. (connecting two tables together)
+
+	$ Hibernate is a framework and supports mapping. It creates queries internally (runs JDBC internally) and only methods are used.
+	$ Started in 2001 by Gavin King.
+	$ It is one ORM framework. (Object Relational Mapping Framework which is a programming technique which is used to convert data from RDBMS to OOPS)
+	$ RDBMS => ORM => OOPS
+	$ Java class <=> hibernate tool <=> JDBC <=> Driver <=> Database
+
+> How to install Hibernate?
+	Using dependencies (present in MVN repository) in pom.xml 
+	Add hibernatecore dependencies
+		OR
+	plugin Hibernate
+
+> persistance.xml (contains url, username and password) is passed to hibernate for authentification
+	Stores the configurable data
+	$ In src/main/resource => create a folder (META_INF) => persistence.xml file
+
+Persistance is a helper class
+
+> EntityManagerFactory
+	Interface
+	Already present in java.persistance
+	Connection between java and database
+	When we create in EMobject, in the database tables are created automatically ( no need to create manually)
+	$ Persistance.createEntityManagerFactory(<persistance unit>);
+		createEMFactory is a public and static method and will take persistance unit (mentioned in persistance.xml file).
+		Return type is EMFactory type.
+
+>Annotations	
+	@Entity
+	@Id
+	> Remove "for caching" part from persistance.xml
+
+> EntityManager
+	Interface
+	java.persistence
+	EntityManager eM1 = EntityManagerFactoryObject.createEntityManager();
+		No parameters
+	Internally establish the statements
+
+>EntityTransaction
+	Interface
+	Managing the transactions 
+	EntityTransaction eT1 = EntityManagerObject.getTransaction();
+	Important Methods : 
+		begin();
+		commit();
+	After Initial methods : 
+		persist(); => store data into table
+		remove(); = > remove data from table
+		find(); => fetch particular data from the table
+		merge(); => update the data from table (if id found) or save method (if id not found)
+
+Note : for fetching data ET is not required, it is only required when we are manipulating the data.
+
+> CreateQuery Method
+	select s from Student s
+
+Query Parameters
+	> Positional	s.name=?1 	=> 1 here is position of the parameter ( here 1 means set the first question mark)	=> query.setParameter(1,"Geeta")	=> Question mark is replaced by Geeta 
+	> Named		s.name=:name	=> query.setParameter("name","Geeta")
