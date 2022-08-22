@@ -19,4 +19,5 @@
 15. @Autowired Annotation
 16. Config file, no .xml file (@Configuration and @ComponentScan Annotation)
 17. @Bean Annotation
-18.
+
+> A Small Project based on MySQL, JDBC, Hibernate and Spring
