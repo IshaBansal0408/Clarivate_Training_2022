@@ -4,7 +4,7 @@
    <img src="https://qph.fs.quoracdn.net/main-qimg-691527b61d93ed73ccc02a4c1eb8dfc9" height=200>
 </p>
 
-## Day 1 - Spring Framework
+## Day 1 - Spring IOC
 
 1. Introduction to EJB Container
 2. Introduction to Spring
@@ -25,5 +25,22 @@
 17. @Bean Annotation
 
 > A Small Project based on MySQL, JDBC, Hibernate and Spring
+
+<hr>
+
+## Day 2 - Understanding Spring JDBC
+
+1. Disadvantages of JDBC - BoilerPlate Code
+2. DriverManagerDataSource Introduction
+3. JDBC Template
+
+Using `Create Table Query` using `execute` method. We use execute query to create table in database.
+
+To `insert data` into database we use `update` method. Return type int to see how many rows are affected in the database.Update method returns int method.
+
+`Select queries` are executed using the `executeQuery()` method.
+Query Methods include : ForList, ForInt, ForLong and many more. Also, `get` method to fetch information
+
+4. Installing Spring MVC
 
 <hr>
