@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Basics</title>
+    <script src="./index.js"></script>
+  </head>
+  <body style="background-color: black">
+    <div
+      style="
+        border: 2px solid black;
+        padding: 10px;
+        background-color: lightblue;
+      "
+    >
+      <h1>Introduction to TypeScript</h1>
+      <p>
+        Typescript is an open source programming language which is mantained by
+        Microsoft. It is a superset of Javascript and has more features than
+        javascript.
+      </p>
+      <br />
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: rgb(206, 155, 155);
+        "
+      >
+        <h3>Why use TypeScript?</h3>
+        <p>
+          It is a fully Object oriented Programming language. It has no
+          Interpreter and is fully compiled language. It is a strongly typed
+          programming language. In typescript, interface plays an important
+          role.
+        </p>
+      </div>
+      <br />
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: lightgreen;
+        "
+      >
+        <h3>Difference between TypeScript and JavaScript</h3>
+        <table
+          border="1"
+          align="center"
+          style="background-color: aliceblue; padding: 10px; text-align: center"
+        >
+          <tr>
+            <th>JavaScript</th>
+            <th>TypeScript</th>
+          </tr>
+          <tr>
+            <td>It is both scripting and programming language.</td>
+            <td>It is a programming language.</td>
+          </tr>
+          <tr>
+            <td>It is both interpreting and compiling language.</td>
+            <td>It is a compiling language. There is no Interpreter.</td>
+          </tr>
+          <tr>
+            <td>It is not fully object oriented programming language.</td>
+            <td>It is fully Object Oriented Programming language.</td>
+          </tr>
+          <tr>
+            <td>There is no Interface.</td>
+            <td>Interfaces play an important role in TypeScript.</td>
+          </tr>
+          <tr>
+            <td>It is not a strongly typed programming language.</td>
+            <td>It is a strongly typed programming language.</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <marquee
+        style="background-color: black; color: whitesmoke; font-size: x-large"
+        >Install node version 16.x.x</marquee
+      >
+      <br /><br />
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: lightseagreen;
+        "
+      >
+        <h3>Some Basic Commands for Terminal</h3>
+        <table
+          border="1"
+          align="center"
+          style="background-color: aliceblue; padding: 10px; text-align: center"
+        >
+          <tr>
+            <th>Command Syntax</th>
+            <th>Description of the Command</th>
+          </tr>
+          <tr>
+            <td>node --version</td>
+            <td>To check the version of node installed earlier.</td>
+          </tr>
+          <tr>
+            <td>ngm install -g typescript</td>
+            <td>
+              This command is used to install the typescript compiler. <br />
+              Here '-g' means global installition.
+            </td>
+          </tr>
+          <tr>
+            <td>tsc --version</td>
+            <td>To check the version of compiler installed.</td>
+          </tr>
+          <tr>
+            <td>tsc fileName</td>
+            <td>Used to compile a tsc file using command prompt.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br />
+    <div
+      style="
+        border: 2px solid black;
+        padding: 10px;
+        background-color: lightpink;
+      "
+    >
+      <h1>DataTypes in TypeScript</h1>
+      Datatypes in Typescript are categorized into three major types:
+      <ul>
+        <li>Built-In DataTypes</li>
+        <li>User Defined Datatypes</li>
+        <li>Any DataType</li>
+      </ul>
+
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: lightgrey;
+        "
+      >
+        <h3>Built-In DataTypes in TypeScript</h3>
+        These are pre-defined datatypes available in typescript. Look at the
+        table mentioned below.
+        <table
+          border="1"
+          align="center"
+          style="background-color: aliceblue; padding: 10px"
+        >
+          <tr>
+            <th>DataType Name</th>
+            <th>Description of the DataType</th>
+          </tr>
+          <tr>
+            <td>Number DataType</td>
+            <td>
+              You can assign any numeric values including decimals,
+              hexadecimals, binary, and octal literals.
+              <br />
+              <code>
+                <pre>
+                // Number DataType
+                var a: number;
+                a = 234;
+                console.log("Value of a : ", a);</pre
+                >
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>String DataType</td>
+            <td>
+              Textual Data is stored in String. <br />TypeScript also uses
+              double quotes (") and single quotes (') to surround the string
+              value.
+              <br />
+              <code>
+                <pre>
+                // String DataType
+                var b: string;
+                b = "Welcome to Typescript";
+                console.log("Value of b : ", b);</pre
+                >
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>Boolean DataType</td>
+            <td>
+              True/False Values<br />
+              <code>
+                <pre>
+                // Boolean DataType
+                var c: boolean;
+                c = false;
+                console.log("Value of c : ", c);</pre
+                >
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>Void DataType</td>
+            <td>
+              It means Nothing. <br />It can only be assigned undefined or null
+              to them.<br />
+              <code>
+                <pre>
+                // Void DataType
+                var d: void;
+                console.log("Value of d : ", d);</pre
+                >
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>Null DataType</td>
+            <td>
+              It can be assigned only null,number or boolean value to it.<br />
+              <code>
+                <pre>
+                // Null DataType
+                var e: null;
+                e = null;
+                console.log("Value of e : ", e);</pre
+                >
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>Undefined DataType</td>
+            <td>
+              You can assign it to a number or a boolean value. <br />
+              <code>
+                <pre>
+                // Undefined Datatype
+                var f: undefined;
+                console.log("Value of f : ", f);
+                var g: number;
+                console.log("Value of g : ", g);
+                </pre>
+              </code>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: lightcyan;
+        "
+      >
+        <h3>User Defined DataTypes in TypeScript</h3>
+
+        <h4>1. Array DataType</h4>
+        An array is a collection of elements of the same data type.
+        <code>
+          <pre>
+// Array DataTypes
+var arr1: number[];
+arr1 = [1, 2, 3, 4, 5];
+console.log("Array is : ", arr1);
+console.log("Type of arr1 is : ", typeof arr1);</pre
+          >
+        </code>
+
+        <h4>2. Class DataType</h4>
+        Classes are used to create reusable components and acts as a template
+        for creating objects.
+        <code>
+          <pre>
+// Class DataType
+class Person {
+  firstName;
+  lastName;
+
+  setName(f: string, l: string) {
+    this.firstName = f;
+    this.lastName = l;
+  }
+  getName() {
+    return "Your Name is : " + this.firstName + " " + this.lastName;
+  }
+}
+var p1 = new Person();
+p1.setName("Raman", "Mishra");
+console.log(p1.getName());</pre
+          >
+        </code>
+        <h4>3. Interface DataType</h4>
+        In general, it defines the specifications of an entity. It has no
+        implementation and only declarations. Classes are used to implement data
+        members of the interface.
+        <code>
+          <pre>
+class UserClass implements UserInterface {
+  name;
+  age;
+  setData(n: string, a: number) {
+    this.name = n;
+    this.age = a;
+  }
+  displayName() {
+    console.log("Your Name is : ", this.name);
+  }
+  checkVoteStatus(): string {
+    if (this.age > 18) return "Yay! You can vote!";
+    return "Oh No! You can't vote right now!";
+  }
+}
+var u1 = new UserClass();
+u1.setData("Minni", 34);
+u1.displayName();
+console.log(u1.checkVoteStatus());</pre
+          >
+        </code>
+        <h4>4. Enum DataType</h4>
+        TypeScript provides both string-based and numeric-based enums. By
+        default, enums begin numbering their elements starting from 0, but we
+        can also change this by manually setting the value to one of its
+        elements.
+        <code>
+          <pre>
+// Enum DataType
+enum MediaType {
+  magazine,
+  newspaper = 67,
+  television,
+  social_media,
+}
+function how2spread(projectName: string): MediaType {
+  if (projectName == "instagram") return MediaType.social_media;
+  return MediaType.magazine;
+}
+console.log(how2spread("instagram"));
+console.log(how2spread("facebook"));</pre
+          >
+        </code>
+      </div>
+      <br />
+      <div
+        style="
+          border: 2px solid black;
+          padding: 10px;
+          background-color: rgb(238, 182, 160);
+        "
+      >
+        <h3>Any DataType</h3>
+        Any Type represents the super type of all data types in TypeScript. It
+        helps to achieve optional dynamic datatype.
+        <code>
+          <pre>
+// Any DataType
+var h: any;
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);
+h = 1234;
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);
+h = "rain";
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);
+h = true;
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);
+h = 45.3;
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);
+h = null;
+console.log("Value of h : ", h);
+console.log("Type of h : ", typeof h);</pre
+          >
+        </code>
+      </div>
+    </div>
+    <br /><br />
+    <div
+      style="
+        border: 2px solid black;
+        padding: 10px;
+        background-color: rgb(212, 212, 135);
+      "
+    >
+      <h2>Union of DataTypes</h2>
+      Union types are a powerful way to express a value that can be one of the
+      several types. Two or more data types are combined using the pipe symbol
+      (|) to denote a Union Type.
+      <code>
+        <pre>
+// Union of DataTypes
+var i: number | string;
+console.log("Value of i : ", i);
+console.log("Type of i : ", typeof i);
+i = 1244;
+console.log("Value of i : ", i);
+console.log("Type of i : ", typeof i);
+i = "hello";
+console.log("Value of i : ", i);
+console.log("Type of i : ", typeof i);</pre
+        >
+      </code>
+
+      <h2>Intersection of Data Types</h2>
+      An intersection type is a type that merges several kinds into one. This
+      allows you to combine many types to create a single type with all of the
+      properties that you require. The ‘&’ operator is used to create the
+      intersection type.
+      <code>
+        <pre>
+// Intersection of DataTypes
+interface Student {
+  student_id: number;
+  name: string;
+}
+
+interface Teacher {
+  Teacher_Id: number;
+  teacher_name: string;
+}
+
+type intersected_type = Student & Teacher;
+
+var obj1: intersected_type = {
+  student_id: 3232,
+  name: "rita",
+  Teacher_Id: 7873,
+  teacher_name: "seema",
+};
+
+console.log(obj1.Teacher_Id);
+console.log(obj1.name);</pre
+        >
+      </code>
+    </div>
+    <br />
+    <marquee style="background-color: aliceblue; font-size: xx-large">
+      You have reached the end of the TypeScript!</marquee
+    >
+
+    <h1 style="color: white; text-align: center">Introduction to Angular</h1>
+    <p style="color: white">
+      Command to install Angular Command Line: npm install -g @angular/cli@13
+      <br />
+      To check the version of Angular : ng --version <br />
+      To create an Angular Project : ng new ProjectName <br />
+      To Run the Angular Project : ng s -o <br />
+    </p>
+    <br />
+    <marquee
+      direction="right"
+      style="background-color: aliceblue; font-size: xx-large"
+    >
+      You have reached the end of the Webpage!</marquee
+    >
+  </body>
+</html>
