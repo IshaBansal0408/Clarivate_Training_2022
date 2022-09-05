@@ -1,0 +1,79 @@
+<!-- Structure Directives -->
+<div class="container">
+  <!-- ngFor -->
+  <h3>Employee Data</h3>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Id</th>
+        <th scope="col">Designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of person_data">
+        <td>{{ p.name }}</td>
+        <td>{{ p.id }}</td>
+        <td>{{ p.designation }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Employee Data:</h3>
+  <ul>
+    <li *ngFor="let p of person_data">
+      {{ p.id }}{{ p.name }}{{ p.designation }}
+    </li>
+  </ul>
+
+  <!-- ngSwitch -->
+  <h3></h3>
+  <div [ngSwitch]="selectedCountry">
+    <div *ngSwitchCase="'Ind'">
+      <h2>India is Selected.</h2>
+    </div>
+    <div *ngSwitchCase="'Cand'">
+      <h2>Canada is Selected.</h2>
+    </div>
+    <div *ngSwitchCase="'Ger'">
+      <h2>Germany is Selected.</h2>
+    </div>
+    <div *ngSwitchCase="'UK'">
+      <h2>United Kingdom is Selected.</h2>
+    </div>
+    <div *ngSwitchDefault>
+      <h2>Nothing Selected</h2>
+    </div>
+  </div>
+</div>
+
+<br />
+<h1>Attribute Directive</h1>
+Attribute directives are used to change the appearance or behavior of an
+element.
+<br />
+<br />
+ngStyle — used to apply styles that will change the appearance. <br />
+ngClass — used to apply CSS classes to change the appearance. <br />
+
+<!-- Attribute Directive -->
+<p [ngClass]="{ p1: flag, p2: flag, p3: flag }">
+  This is the example of ngClass.
+</p>
+
+<p
+  [ngStyle]="
+    flag2
+      ? {
+          color: 'blue',
+          'font-size': 'xx-large',
+          'background-color': 'aliceblue'
+        }
+      : {
+          color: 'aliceblue',
+          'font-size': 'large',
+          'background-color': 'brown'
+        }
+  "
+>
+  This is the example of ngStyle.
+</p>

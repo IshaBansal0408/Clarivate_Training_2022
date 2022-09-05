@@ -1,0 +1,8 @@
+<h1>This is Parent Component</h1>
+<!-- We will then bound the child variable to parent variable -->
+<app-child
+  [childValue]="parentValue"
+  (childVar)="getChildData($event)"
+></app-child>
+
+<h3>{{ result }}</h3>

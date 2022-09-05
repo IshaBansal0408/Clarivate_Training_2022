@@ -1,0 +1,43 @@
+<h1>Introduction to Directives</h1>
+
+Basically directives are used to manipulate the DOM, for example adding/removing
+the element from DOM or changing the appearance of the DOM elements.
+<br />
+<br />
+Types of directives:
+<ul>
+  <li>Component directive</li>
+  <li>Structural directive</li>
+  <li>Attribute directive</li>
+</ul>
+
+<h2>Component Directive</h2>
+Component Directives are used to manipulate the DOM, so now if you think what
+component is doing, it is actually showing something in DOM.
+
+<h2>Structural directive</h2>
+Structural directives are used to change the DOM layout by adding and removing
+DOM elements.
+<br /><br />Examples of structural directives are ngIf, ngFor, ngSwitch.
+
+<ul>
+  <li>*ngIf — adds or removes element from DOM.</li>
+  <li>*ngFor — renders list of elements on every iteration.</li>
+  <li></li>
+</ul>
+
+<div style="background-color: yellow">
+  The next paragraph is using the *ngIf directive. <br /><br />
+  <button (click)="displayContent()">
+    Click this button to Hide/View Text
+  </button>
+
+  <!-- ngIF directive -->
+  <p *ngIf="visiFlag">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, eum. Eaque
+    impedit deleniti placeat culpa veritatis animi similique, pariatur
+    repudiandae perferendis, commodi eum nostrum, aliquam ea amet ex assumenda
+    eveniet?
+  </p>
+</div>
+<app-home></app-home>

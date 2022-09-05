@@ -1,0 +1,101 @@
+<p>first works!</p>
+<hr />
+<h1>Data Binding Introduction</h1>
+<p style="font-size: x-large">
+  Data Binding refers to exchange of information between the View file and the
+  Model file. Whenever the user updates the data in the view, Angular updates
+  the component. When the component gets new data, the Angular updates the view.
+  There are two types of Data Binding: One-Way and Two-Way.<br />
+</p>
+
+<hr />
+<h2>One-Way Data Binding</h2>
+<p style="font-size: x-large">
+  In <b>'one way binding'</b>data flows from one direction. Either from view to
+  component or from component to view.
+</p>
+
+<h3>1. Interpolation</h3>
+<p style="font-size: large">
+  The Angular uses the double curly braces in the template to denote the
+  interpolation. The content inside the double braces is called 'Template
+  Expression'.
+</p>
+<!-- Interpolation -->
+Here is the Interpolation data binding variable => {{ variable01 }}
+<p style="font-size: large">
+  The Angular first evaluates the Template Expression and converts it into a
+  string. Then it replaces Template expression with the result in the original
+  string in the HTML. Whenever the template expression changes, the Angular
+  updates the original string again
+</p>
+<!-- Interpolation Expression Computation -->
+Here is an Interpolation expression being executed (14+13) => {{ 14 + 13 }}
+
+<!-- Property Binding -->
+<h3>2. Property binding</h3>
+<p style="font-size: large">
+  The Property binding allows us to bind HTML element property to a property in
+  the component.
+</p>
+The input box is using the property binding :
+<input type="text" [placeholder]="placeholderText" />
+
+<!-- Style Binding -->
+<h3>3. Style Binding</h3>
+<p style="font-size: large">
+  The Style Binding uses the [] brackets. Place the CSS Style property (binding
+  target) inside the square bracket. The CSS Style property must begin with
+  ‘Style’ followed by a dot (.) and then style name.
+</p>
+<p [style.color]="color01">This is a Style Binding Text.</p>
+<p style="font-size: large">
+  Style Binding can also take expressions like the text here:
+</p>
+<p [style.color]="colorFlag ? color01 : color02">
+  This is second Style Binding Text.
+</p>
+
+<!-- Attribute Binding -->
+<h3>4. Attribute Binding</h3>
+<p style="font-size: large">
+  The attribute syntax starts with attr followed by a dot and then the name of
+  the attribute. <br />
+  The following tables follows attribute binding.
+</p>
+<table border="2" style="font-size: large">
+  <tr>
+    <th [attr.colspan]="colpanVar">Name of the person</th>
+  </tr>
+  <tr>
+    <td>Taylor</td>
+    <td>Swift</td>
+  </tr>
+  <tr>
+    <td>Selena</td>
+    <td>Gomez</td>
+  </tr>
+</table>
+
+<!-- Event Binding -->
+<h3>5. Event Binding</h3>
+<p style="font-size: large">
+  Event binding allows us to bind events such as keystrokes, clicks, hover,
+  touch, etc to a method in component. It is one way from view to component.
+</p>
+<button (click)="displayName()" style="font-size: x-large">Click on Me!</button>
+
+<hr />
+<h2>Two-Way Data Binding</h2>
+<p style="font-size: x-large">
+  <b>'Two-way binding'</b> means that changes made to our model in the component
+  are propagated to the view and that any changes made in the view are
+  immediately updated in the underlying component. <br />
+  The two-way binding uses the special syntax known as a banana in a box [()].
+  <br />
+  The Angular uses the 'ngModel' directive to achieve the two-way binding on
+  HTML Form elements.
+</p>
+
+<input type="text" [(ngModel)]="testTwoWay" style="font-size: x-large" />
+<p style="font-size: xx-large">{{ testTwoWay }}</p>
