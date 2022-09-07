@@ -1,0 +1,16 @@
+<h3>This is the parent component</h3>
+<button (click)="toggleChild()">Toggle Child</button>
+<app-child *ngIf="childFlag" [userName]="userName">
+  <h1 #cheader>This is Content Projection</h1>
+</app-child>
+<br /><br />
+<input
+  type="text"
+  [(ngModel)]="userName"
+  style="font-size: x-large; width: 400px"
+/>
+<br />
+<br />
+{{ userName }}
+
+<h2 #pheader>This is one normal html element</h2>
