@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+    <ng-content select=".heading"></ng-content>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Colors Available</th>
+          <th scope="col">Original Price</th>
+          <th scope="col">Discount Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of prodList">
+          <td>{{ p.prodID }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.color }}</td>
+          <td>{{ p.price }}</td>
+          <td>{{ p.discount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <ng-content select=".KnowMore"></ng-content>
+    <br /><br />
+  </div>
+</div>

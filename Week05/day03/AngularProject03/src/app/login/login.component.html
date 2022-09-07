@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Welcome User!</h1>
+  <h2>Please Login :)</h2>
+  <h3>Enter your credentials</h3>
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="userEmail"
+          formControlName="userEmail"
+        />
+        <span
+          *ngIf="userEmail?.invalid && userEmail?.touched"
+          style="color: red"
+          >Please enter the correct Email Address!</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="userPassword"
+          formControlName="userPassword"
+        />
+        <span
+          *ngIf="userPassword?.invalid && userPassword?.touched"
+          style="color: red"
+          >Please enter the correct Password!</span
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

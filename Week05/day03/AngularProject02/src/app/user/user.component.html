@@ -1,0 +1,22 @@
+<h1>I am User Component</h1>
+<div class="container">
+  <h3>Employee Details</h3>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of personsList">
+        <td>{{ p.pId }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.designation }}</td>
+        <td>{{ p.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

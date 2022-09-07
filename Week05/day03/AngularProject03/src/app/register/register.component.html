@@ -1,0 +1,70 @@
+<div class="container">
+  <h2>Welcome to the Website!</h2>
+  <h3>Register Yourself!</h3>
+  <div>
+    <!-- Convert the form to Angular Form -->
+    <form #regForm="ngForm" (ngSubmit)="RegisterUser(regForm)">
+      <div class="form-group">
+        <label for="exampleInputFName">Enter First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputFName"
+          aria-describedby="fNameHelp"
+          name="fName"
+          #fName="ngModel"
+          ngModel
+          required
+          maxlength="20"
+          minlength="3"
+          pattern="[a-z,A-z]+$"
+        />
+        <span *ngIf="fName.invalid && fName.touched" style="color: red"
+          >Please enter the valid First Name!</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputLName">Enter Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputLName"
+          aria-describedby="lNameHelp"
+          name="lName"
+          #lName="ngModel"
+          ngModel
+          required
+          maxlength="20"
+          minlength="3"
+          pattern="[a-z,A-z]+$"
+        />
+        <span *ngIf="lName.invalid && lName.touched" style="color: red"
+          >Please enter the valid Last Name!</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+          #password="ngModel"
+          ngModel
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+        />
+        <span *ngIf="password.invalid && password.touched" style="color: red"
+          >Please enter a strong password!</span
+        >
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="regForm.invalid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
