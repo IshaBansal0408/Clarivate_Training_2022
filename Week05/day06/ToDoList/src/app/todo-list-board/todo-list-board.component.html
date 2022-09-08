@@ -1,0 +1,56 @@
+<div>
+  <h2>All Tasks are as follows :</h2>
+  <br />
+  <div style="text-align: center">
+    <button
+      type="button"
+      class="btn btn-warning"
+      style="font-size: xx-large"
+      (click)="showIncomplete()"
+    >
+      Show ToDoList</button
+    >&nbsp;&nbsp;
+    <button
+      type="button"
+      class="btn btn-success"
+      style="font-size: xx-large"
+      (click)="showCompleteTasks()"
+    >
+      Show Completed List</button
+    >&nbsp;&nbsp;
+    <button
+      type="button"
+      class="btn btn-success"
+      style="font-size: xx-large"
+      (click)="showAllTasks()"
+    >
+      Show All Task List
+    </button>
+  </div>
+  <br />
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">TaskID</th>
+          <th scope="col">Title of the Task</th>
+          <th scope="col">Completed?</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="flagAllTask">
+        <tr *ngFor="let t of allTasks">
+          <td>{{ t.id }}</td>
+          <td>{{ t.title }}</td>
+          <td>{{ t.completed }}</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="flagstatusTask">
+        <tr *ngFor="let t of statusTasks">
+          <td>{{ t.id }}</td>
+          <td>{{ t.title }}</td>
+          <td>{{ t.completed }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
