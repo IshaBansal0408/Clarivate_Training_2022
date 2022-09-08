@@ -1,0 +1,55 @@
+<div class="container">
+  <h2>Add new details of the Product</h2>
+
+  <form #editProductForm="ngForm" (ngSubmit)="editProduct(editProductForm)">
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        id="productName"
+        name="productName"
+        #productName="ngModel"
+        [(ngModel)]="selectedProduct.productName"
+      />
+    </div>
+    <div class="form-group">
+      <label for="productDescription">Product Description</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        id="productDescription"
+        name="productDescription"
+        #productDescription="ngModel"
+        [(ngModel)]="selectedProduct.productDescription"
+      />
+    </div>
+    <div class="form-group">
+      <label for="productPrice">Product Price</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        id="productPrice"
+        name="productPrice"
+        #productName="ngModel"
+        [(ngModel)]="selectedProduct.productPrice"
+      />
+    </div>
+    <div class="form-group">
+      <label for="productImageURL">Product Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        id="productImageURL"
+        name="productImageURL"
+        #productName="ngModel"
+        [(ngModel)]="selectedProduct.productImageURL"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

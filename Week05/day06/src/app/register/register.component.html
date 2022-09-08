@@ -1,0 +1,56 @@
+<div class="container">
+  <h3>Please Register Yourself!</h3>
+  <form #regForm="ngForm" (ngSubmit)="regUser(regForm)">
+    <div class="form-group">
+      <label for="">Enter your Full Name</label
+      ><input
+        type="text"
+        class="form-control"
+        ngModel
+        id="fullName"
+        name="fullName"
+        #fullName="ngModel"
+        placeholder="Enter your Full Name here"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Enter your Email Address</label
+      ><input
+        type="email"
+        class="form-control"
+        ngModel
+        id="email"
+        name="email"
+        #email="ngModel"
+        placeholder="Enter your Email here"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Enter your Password</label
+      ><input
+        type="password"
+        class="form-control"
+        ngModel
+        id="password"
+        name="password"
+        #password="ngModel"
+        placeholder="Enter a strong password here"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="">Enter your Role in the Company</label
+      ><input
+        type="text"
+        class="form-control"
+        ngModel
+        id="role"
+        name="role"
+        #role="ngModel"
+        placeholder="Enter your Role here"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register Yourself!</button>
+  </form>
+</div>

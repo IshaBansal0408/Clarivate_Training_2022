@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Products Extracted From Server are as follows :</h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Product ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Product Image URL</th>
+        <th scope="col">Update Product</th>
+        <th scope="col">Delete Product</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of allProducts">
+        <td>{{ p._id }}</td>
+        <td>{{ p.productName }}</td>
+        <td>{{ p.productDescription }}</td>
+        <td>{{ p.productPrice }}</td>
+        <td>{{ p.productImageURL }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-warning"
+            [routerLink]="['/edit-product/', p._id]"
+          >
+            Update
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteProduct(p._id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

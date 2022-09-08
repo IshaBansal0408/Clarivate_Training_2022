@@ -1,0 +1,31 @@
+<div class="container">
+  <h3>Please Login!</h3>
+  <form #logForm="ngForm" (ngSubmit)="loginUser(logForm)">
+    <div class="form-group">
+      <label for="">Enter your Email Address</label
+      ><input
+        type="email"
+        class="form-control"
+        ngModel
+        id="email"
+        name="email"
+        #email="ngModel"
+        placeholder="Enter your Email here"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Enter your Password</label
+      ><input
+        type="password"
+        class="form-control"
+        ngModel
+        id="password"
+        name="password"
+        #password="ngModel"
+        placeholder="Enter a strong password here"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login Yourself!</button>
+  </form>
+</div>
